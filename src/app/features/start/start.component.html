@@ -1,0 +1,36 @@
+
+<div class="start-wrapper">
+  <div class="start-card">
+    <h2 class="title">What do you need to purchase?</h2>
+
+    <div class="choices">
+      @for (schema of schemas(); track schema.id) {
+        <button
+          type="button"
+          class="choice"
+          [class.choice-selected]="isSelected(schema.id)"
+          (click)="select(schema.id)"
+        >
+          <span class="choice-icon">
+            @if (schema.id === 'software-request') {
+              <img src="https://www.svgrepo.com/show/152587/four-squares-button-of-view-options.svg" alt="software"/>
+            }
+            @if (schema.id === 'hardware-request') {
+              <img src="https://static.thenounproject.com/png/1871497-200.png" alt="hardware"/>
+            }
+          </span>
+          {{ schema.title }}
+        </button>
+      }
+    </div>
+
+    <button
+      type="button"
+      class="btn-start"
+      [disabled]="!selectedId()"
+      (click)="start()"
+    >
+      Start
+    </button>
+  </div>
+</div>

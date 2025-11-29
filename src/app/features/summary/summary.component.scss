@@ -1,0 +1,58 @@
+.summary-card {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px #0000000d;
+  text-align: center;
+}
+
+.summary-header {
+  margin-bottom: 24px;
+}
+
+.emoji {
+  font-size: 60px;
+  margin-bottom: 8px;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.summary-table th,
+.summary-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eceff4;
+  font-size: 15px;
+}
+
+.summary-table th {
+  font-weight: 600;
+  color: #444;
+}
+
+.summary-table td:last-child {
+  text-align: right;
+  color: #555;
+}
+
+.btn-primary {
+  padding: 10px 32px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  background: #2bb390;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #25a180;
+}

@@ -1,0 +1,77 @@
+.start-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.start-card {
+  width: 900px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #222;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: 2px solid #d3d7df;
+  background: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.15s;
+}
+
+.choice-icon img {
+  height: 18px;
+  width: 18px;
+}
+
+.choice:hover {
+  border-color: #1da98b;
+}
+
+.choice-selected {
+  background: #e6faf4;
+  border-color: #1da98b;
+  color: #1da98b;
+  font-weight: 600;
+}
+
+.btn-start {
+  padding: 10px 34px;
+  border-radius: 6px;
+  background: #1da98b;
+  border: 0;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.btn-start:hover:not(:disabled) {
+  background: #189b7d;
+}
+
+.btn-start:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

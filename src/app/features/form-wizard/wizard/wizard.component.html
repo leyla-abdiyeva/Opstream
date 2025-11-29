@@ -1,0 +1,37 @@
+<div class="wizard-layout">
+
+  <aside class="sidebar">
+    @for (section of sections(); track section.id; let i = $index) {
+      <div
+        class="sidebar-item"
+        [class.active]="i === pageIndex()"
+        (click)="pageIndex.set(i)"
+      >
+        {{ section.title }}
+      </div>
+    }
+  </aside>
+
+  <section class="wizard-content">
+
+    <app-wizard-page
+      [section]="currentSection"
+      [group]="currentGroup"
+    />
+
+    <div class="wizard-actions">
+      @if (pageIndex() > 0) {
+        <button class="btn btn-prev" (click)="goPrev()">Previous</button>
+      }
+
+      @if (!isLastPage()) {
+          <button class="btn btn-next" (click)="goNext()" [disabled]="currentGroup.invalid">Next</button>
+      }
+
+      @if (isLastPage()) {
+          <button class="btn btn-submit" (click)="submit()" [disabled]="form.invalid">Submit</button>
+      }
+    </div>
+  </section>
+
+</div>

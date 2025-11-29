@@ -1,0 +1,29 @@
+<div class="summary-card card">
+  <div class="summary-header">
+    <div class="emoji">🧁</div>
+    <h2>Awesome!</h2>
+    <p>It works!</p>
+  </div>
+
+  <table class="summary-table">
+    <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+    </thead>
+
+    <tbody>
+      @for (row of rows; track row.label) {
+        <tr>
+          <td>{{ row.label }}</td>
+          <td>{{ row.value }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <button type="button" class="btn-primary" (click)="reset()">
+    Complete the flow and Reset
+  </button>
+</div>

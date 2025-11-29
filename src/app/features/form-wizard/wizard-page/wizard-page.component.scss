@@ -1,0 +1,78 @@
+.wizard-container {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+}
+
+.sidebar {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.sidebar-item {
+  padding: 10px 0;
+  cursor: pointer;
+  color: #777;
+}
+
+.sidebar-item.active {
+  color: #1a7f72;
+  font-weight: 600;
+}
+
+.content {
+  flex: 1;
+}
+
+.field {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.field-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.required {
+  color: red;
+}
+
+.field-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn.primary {
+  background: #1a7f72;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.btn.secondary {
+  background: #eee;
+  padding: 8px 16px;
+  border-radius: 4px;
+}

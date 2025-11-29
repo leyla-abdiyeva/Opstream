@@ -1,0 +1,30 @@
+<div class="field" [formGroup]="group">
+
+  <label class="field-label">
+    {{ field.label }}
+
+    @if (field.required) {
+      <span class="required">*</span>
+    }
+  </label>
+
+  <div class="radio-group">
+    @for (opt of field.options; track $index) {
+      <label class="radio-option">
+        <input
+          type="radio"
+          [value]="opt"
+          [formControlName]="controlName"
+        />
+        <span>{{ opt }}</span>
+      </label>
+    }
+  </div>
+
+  @if (showError) {
+    <div class="field-error">
+      Please choose an option.
+    </div>
+  }
+
+</div>

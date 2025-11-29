@@ -1,0 +1,31 @@
+<div class="wizard-page">
+
+  <h2>{{ section.title }}</h2>
+
+  @for (field of section.fields; track field.id) {
+    @switch (field.type) {
+
+      @case ('text') {
+        <app-field-control [field]="field" [group]="group" />
+      }
+
+      @case ('number') {
+        <app-field-control [field]="field" [group]="group" />
+      }
+
+      @case ('radio') {
+        <app-radio-control [field]="field" [group]="group" />
+      }
+
+      @case ('toggle') {
+        <app-toggle-control [field]="field" [group]="group" />
+      }
+
+      @default {
+        Unknown field type: {{ field.type }}
+      }
+    }
+
+  }
+
+</div>
