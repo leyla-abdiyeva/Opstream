@@ -5,7 +5,10 @@ import {SummaryComponent} from './features/summary/summary.component';
 
 export const routes: Routes = [
   { path: '', component: StartComponent },
-  { path: 'wizard/:schemaId', component: WizardComponent },
+  { path: 'wizard/:schemaId',
+    component: WizardComponent,
+    data: { renderMode: 'client' }
+  },
   { path: 'summary', component: SummaryComponent },
   { path: '**', redirectTo: '' }
 ];
